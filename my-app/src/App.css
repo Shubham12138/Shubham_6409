@@ -1,0 +1,153 @@
+.form-container {
+  width: 100%;
+  max-width: 1000px;
+  margin: 40px auto;
+  padding: 40px;
+  background-color: rgba(255, 255, 255, 0.95);
+  border-radius: 12px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.15);
+}
+
+.form-title {
+  text-align: center;
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin-bottom: 30px;
+  margin-top: 10px;
+  color: #213547;
+}
+
+.form-field {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 20px;
+}
+
+.form-field label {
+  margin-bottom: 8px;
+  font-weight: 500;
+  font-size: 1rem;
+  color: #333;
+}
+
+.form-field input,
+.form-field select {
+  padding: 10px 14px;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  background-color: #fff;
+  outline: none;
+}
+
+.form-field input:focus,
+.form-field select:focus {
+  border-color: #646cff;
+  box-shadow: 0 0 3px rgba(100, 108, 255, 0.5);
+}
+
+.error {
+  color: red;
+  font-size: 0.85rem;
+  margin-top: 4px;
+}
+
+.toggle-password {
+  margin-top: 5px;
+  font-size: 0.85rem;
+  cursor: pointer;
+  color: #555;
+  user-select: none;
+}
+
+button {
+  background-color: #646cff;
+  color: white;
+  padding: 12px 20px;
+  font-size: 1rem;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+}
+
+button:hover:not(:disabled) {
+  background-color: #4c55cc;
+}
+
+.theme-switch-wrapper {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  z-index: 1000;
+}
+
+.theme-switch {
+  display: inline-block;
+  position: relative;
+  width: 60px;
+  height: 34px;
+}
+
+.theme-switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #fffaf0;
+  transition: 1.5s;
+  border-radius: 34px;
+  border: 2px solid #333;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 26px;
+  width: 26px;
+  left: 4px;
+  bottom: 2px;
+  background-color: #333;
+  transition: 1.5s;
+  border-radius: 50%;
+}
+
+input:checked + .slider {
+  background-color: #1e1e2f;
+  border-color: #fff;
+}
+
+input:checked + .slider:before {
+  transform: translateX(26px);
+  background-color: #fff;
+}
+
+/* Add sun and moon icons */
+.slider:after {
+  content: "☀️";
+  position: absolute;
+  left: 8px;
+  top: 4px;
+  font-size: 16px;
+  transition: 1.5s;
+  opacity: 1;
+}
+
+input:checked + .slider:after {
+  content: "🌙";
+  left: 36px;
+  opacity: 1;
+}
